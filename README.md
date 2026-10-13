@@ -2,8 +2,8 @@
 
 SE4458 – Assignment 2 (Group 1: Address Book). REST API to create, edit, delete, search, sort and favorite addresses.
 
-- Code: https://github.com/<KULLANICI_ADI>/address-book-api
-- Live (Swagger): https://<PROJE>.vercel.app/api-docs
+- Code: https://github.com/siracc35/address-book-api
+- Live (Swagger): https://address-book-api-six.vercel.app/api-docs
 - Author: Sirac Ketenoğlu
 
 ## Stack
@@ -36,4 +36,7 @@ npm start    # http://localhost:3000/api-docs
 - Data lives in memory, so it resets when the server restarts.
 
 ## Issues encountered
-<!-- Deploy sırasında gerçekten yaşadığın sorunları buraya yaz -->
+- The GitHub repo was created with an initial README, so the first push was rejected as unrelated histories. I merged the remote commit and kept my own README.
+- Vercel project names must be lowercase (no spaces), so a descriptive name was rejected; I used `address-book-api`.
+- Vercel could not link the GitHub repo for automatic deploys (missing GitHub login connection). The deploy itself worked, so I deploy manually with `npx vercel --prod`.
+- Because the data is in memory and Vercel runs the app as serverless functions, records can disappear after the app has been idle.
